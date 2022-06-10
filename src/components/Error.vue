@@ -10,7 +10,11 @@
       >
         <use xlink:href="#exclamation-triangle-fill" />
       </svg>
-      <div>{{ msg }}</div>
+      <ul class="text-start">
+        <li v-for="item in msg" :key="item.id">
+          {{ item }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -19,7 +23,7 @@
 export default {
   name: "ErrorComponente",
   props: {
-    msg: String,
+    msg: Array,
   },
 };
 </script>
