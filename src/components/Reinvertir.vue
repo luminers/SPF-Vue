@@ -1,6 +1,7 @@
 <template>
   <div class="d-flex justify-content-center">
     <ul class="list-group w-50 mt-4">
+      <li class="list-group-item">Monto final</li>
       <li
         class="list-group-item"
         v-for="(item, index) in this.resultados"
@@ -39,7 +40,7 @@ export default {
       for (let i = 0; i < 4; i++) {
         console.log(this.monto);
         nuevoMonto = this.montoFinal(nuevoMonto, porcentaje);
-        this.resultados.push(nuevoMonto);
+        this.resultados.push(nuevoMonto.toFixed(2));
       }
     },
     calcular() {

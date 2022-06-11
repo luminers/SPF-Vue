@@ -27,7 +27,7 @@ export default {
       montoFinal =
         this.monto + this.monto * ((this.dias / 360) * (porcentaje / 100));
 
-      this.resultado = Math.ceil(parseFloat(montoFinal));
+      this.resultado = parseFloat(montoFinal).toFixed(2);
       console.log(this.resultado);
     },
     calcular() {

@@ -51,7 +51,7 @@
       :verificado="this.formulario.verificado"
     />
     <Reinvertir
-      v-if="this.formulario.verificado"
+      v-if="this.formulario.verificado && this.formulario.reinvertir"
       :dias="this.formulario.dias"
       :monto="this.formulario.monto"
       :reinvertir="this.formulario.reinvertir"
